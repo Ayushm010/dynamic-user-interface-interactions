@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #020232;
+  --primary-text: #ffffff;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--primary-text);
+}
+
+/* ------------ Dropdown Menu --------------- */
+
+.dropdown-items {
+  color: var(--primary-color);
+}
+.menu-visible {
+  height: auto;
+  width: 100px;
+  border: 1px solid gray;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-visible {
+  border: 1px solid gray;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+/* ------------------------------------------- */
+
+/* Image Carousel */
