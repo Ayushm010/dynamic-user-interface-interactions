@@ -15,7 +15,15 @@ body {
 }
 
 /* ------------ Dropdown Menu --------------- */
+.dropdown{
+  width: 100px;
+  height: 40px;
 
+  padding: 10px;
+}
+.dropdown-text{
+  cursor: pointer;
+}
 .dropdown-items {
   color: var(--primary-color);
 }
@@ -41,3 +49,25 @@ body {
 /* ------------------------------------------- */
 
 /* Image Carousel */
+
+.image-carousel-container{
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.frame{
+  width: 800px;
+  height: 500px;
+  margin: 10px;
+  border: 5px solid white;
+  border-radius: 3%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  overflow: hidden;
+}
