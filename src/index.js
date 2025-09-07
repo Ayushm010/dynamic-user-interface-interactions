@@ -37,6 +37,36 @@ import gotImg from "./img/Got.jpeg";
 import trueDetectiveImg from "./img/TrueDetective.jpeg";
 import daredevilImg from "./img/Daredevil.jpeg";
 
-let imgSource = [brbaIMg, darkImg, gotImg, trueDetectiveImg, daredevilImg];
+const images = [brbaIMg, darkImg, gotImg, trueDetectiveImg, daredevilImg];
 
+let currentIndex = 0;
+
+const frame = document.querySelector(".frame");
+
+function showImage() {
+  frame.innerHTML = "";
+  const img = document.createElement("img");
+  img.src = images[currentIndex];
+  img.classList.add("slideImage");
+  frame.appendChild(img);
+}
+
+showImage();
+
+document.querySelector(".next").addEventListener("click", () => {
+  currentIndex += 1;
+  if (currentIndex === 5) currentIndex = 0;
+  showImage();
+});
+
+document.querySelector(".previous").addEventListener("click", () => {
+  currentIndex -= 1;
+  if (currentIndex === -1) currentIndex = 4;
+  showImage();
+});
+
+setTimeout(() => {
+  currentIndex++;
+  showImage();
+}, 2000);
 
