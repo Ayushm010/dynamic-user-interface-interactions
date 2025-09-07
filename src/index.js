@@ -65,8 +65,17 @@ document.querySelector(".previous").addEventListener("click", () => {
   showImage();
 });
 
-setTimeout(() => {
+setInterval(() => {
   currentIndex++;
+  if (currentIndex === images.length) currentIndex = 0;
   showImage();
-}, 2000);
+}, 5000);
 
+// Navigation dots
+
+document.querySelector(".nav-dots").addEventListener("click",(event)=>{
+  const dot = event.target;
+  console.log(dot);
+  currentIndex = Number(dot.id);
+  showImage();
+})
